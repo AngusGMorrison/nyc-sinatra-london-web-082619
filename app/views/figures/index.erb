@@ -1,0 +1,20 @@
+<h1>NYC Figures</h1>
+
+<% Figure.all.each do |figure| %>
+  <h2><%= figure.name %></h2>
+  <h3>Titles</h3>
+  <ul>
+    <% figure.titles.each do |title| %>
+      <li><%= title.name %></li>
+    <% end %>
+  </ul>
+  <h3>Landmarks</h3>
+  <ul>
+    <% figure.landmarks.each do |landmark| %>
+      <li><%= landmark.name %></li>
+      <ul>
+        <li>Year completed: <%= landmark.year_completed %></li>
+      </ul>
+    <% end %>
+  </ul>
+<% end %>
